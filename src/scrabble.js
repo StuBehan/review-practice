@@ -1,16 +1,17 @@
 class Scrabble {
   constructor(scrabbleWord) {
     this.scrabbleWord = scrabbleWord;
+    this.values = {A:1, E:1, I:1, O:1, U:1, L:1, N:1, R:1, S:1, T:1,
+                   D:2, G:2, 
+                   B:3, C:3, M:3, P:3,
+                   F:4, H:4, V:4, W:4, Y:4,
+                   K:5,
+                   J:8, X:8,
+                   Q:10, Z:10}
     this.score = this.evaluateScore();
   };
 
   evaluateScore() {
-    if (this.scrabbleWord === 'a') {
-      return 1
-    } else if (this.scrabbleWord === 'd') {
-      return 2
-    } else if (this.scrabbleWord === 'b') {
-      return 3
-    }
+    return this.values[this.scrabbleWord.toUpperCase()]
   }
 };
