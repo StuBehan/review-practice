@@ -12,6 +12,13 @@ class Scrabble {
   };
 
   evaluateScore() {
-    return this.values[this.scrabbleWord.toUpperCase()]
+    let wordArray = this.scrabbleWord.toUpperCase().split("")
+    let total = 0
+
+    wordArray.forEach(element => {
+      total += this.values[element]
+    });
+
+    return total
   }
 };

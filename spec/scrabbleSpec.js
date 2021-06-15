@@ -16,4 +16,9 @@ describe('scrabble', () => {
     scrabble = new Scrabble('b')
     expect(scrabble.score).toEqual(3)
   })
+
+  it('returns the score of a given word', () => {
+    scrabble = new Scrabble('cat')
+    expect(scrabble.score).toEqual(5)
+  })
 })
