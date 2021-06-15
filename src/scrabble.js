@@ -16,9 +16,12 @@ class Scrabble {
     let total = 0
 
     wordArray.forEach(element => {
-      total += this.values[element]
+      if(element.match(/\w/)){
+        total += this.values[element]
+      } else {
+        return
+      }
     });
-
     return total
   }
 };

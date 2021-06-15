@@ -21,4 +21,14 @@ describe('scrabble', () => {
     scrabble = new Scrabble('cat')
     expect(scrabble.score).toEqual(5)
   })
+
+  it('returns 0 when the input is invalid', () => {
+    scrabble = new Scrabble('')
+    expect(scrabble.score).toEqual(0)
+  })
+
+  it('returns 0 when an illegal character is entered', () => {
+    scrabble = new Scrabble('#')
+    expect(scrabble.score).toEqual(0)
+  })
 })
