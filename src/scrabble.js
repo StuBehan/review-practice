@@ -6,10 +6,11 @@ class Scrabble {
 
   evaluateScore() {
     if (this.scrabbleWord === 'a') {
-      return this.score = 1
+      return 1
     } else if (this.scrabbleWord === 'd') {
-      return this.score = 2
+      return 2
+    } else if (this.scrabbleWord === 'b') {
+      return 3
     }
-    
   }
 };
