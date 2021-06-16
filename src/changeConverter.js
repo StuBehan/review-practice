@@ -2,17 +2,23 @@ class ChangeGenerator {
 
   convert(value) {
     let change = []
+    let currentValue = value
+    const denomonations = [20, 10, 5, 1, 0.5, 0.2, 0.1, 0.05, 0.02, 0.01]
 
-    if (value % 1 === 0) {
-      for (let i = 0; i < value /1; i++)
-      change.push('£1')
-    }
+    denomonations.forEach(number => {
+      if (currentValue / number >= 1) {
+        for (let i = 0; i <= currentValue / number; i++) {
+          if (number >= 1) {
+            change.push(`£${number}`)
+          } else {
+            change.push(`${number * 100}p`)
+          }
+          currentValue = (currentValue * 100 - number * 100) / 100
+        }
+      }
+    })
 
+    console.log("result:", change)
     return change
-    // if (value === 1) {
-    //   return ['£1']
-    // } else if (value === 2) {
-    //   return ['£1', '£1']
-    // }
   }
 }
