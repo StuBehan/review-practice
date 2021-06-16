@@ -15,9 +15,9 @@ class Scrabble {
     let wordArray = this.scrabbleWord.toUpperCase().split("")
     let total = 0
 
-    wordArray.forEach(element => {
-      if(element.match(/\w/)){
-        total += this.values[element]
+    wordArray.forEach(char => {
+      if(char.match(/\w/)){
+        total += this.values[char]
       } else {
         return
       }
