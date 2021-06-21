@@ -1,3 +1,5 @@
-function highAndLow(numbers){
-  return '3, 1'
+const highAndLow = (numbers) => {
+  numbersArray = numbers.split(' ')
+  
+  return `${Math.max(...numbersArray)} ${Math.min(...numbersArray)}`
 }
