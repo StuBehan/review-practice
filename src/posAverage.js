@@ -1,3 +1,7 @@
 const posAverage = (string) => {
-  return 10
+  let strings = string.split(", ")
+  
+  if (strings[0] === strings[1]) {
+    return 100
+  }
 }

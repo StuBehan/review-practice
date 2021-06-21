@@ -22,3 +22,7 @@ Example:
 Given string s = "444996, 699990, 666690, 096904, 600644, 640646, 606469, 409694, 666094, 606490" composing a set of n = 10 substrings (hence 45 combinations), pos_average returns 29.2592592593.
 
 In a set the n substrings will have the same length ( > 0 ).
+
+| '1, 1' | 100 |
+| '1, 2' | 0 |
+| '1, 1, 2' | 33.3333333333 |
