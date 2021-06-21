@@ -18,7 +18,6 @@ class ChangeGenerator {
       }
     })
 
-    console.log("result:", change)
     return change
   }
 }
