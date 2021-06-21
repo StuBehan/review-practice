@@ -1,20 +1,28 @@
 const posAverage = (string) => {
   let strings = string.split(", ")
-  let result = 0
+  let positionMatches = 0
   
   strings.forEach((number, index) => {
     for (let i = index + 1; i < strings.length; i ++) {
       if (number === strings[i]) {
-        result++ 
+        positionMatches++ 
       }
     }
   })
   
-  let numOfStrings = strings.length
-  let combinations = (numOfStrings * (numOfStrings-1)) / 2
+  const combinations = (array) => {
+    let numOfStrings = array.length
+    return (numOfStrings * (numOfStrings-1)) / 2
+  }
 
-  let posAvg = (result / combinations) * 100  
+  const posAvg = (number, array) => {
+    return (number / combinations(array)) * 100  
+  }
 
-  return parseFloat(posAvg.toFixed(10))
+  const toFloat = (number, array) => {
+    return parseFloat(posAvg(number, array).toFixed(10))
+  }
+
+  return toFloat(positionMatches, strings)
 }
 
