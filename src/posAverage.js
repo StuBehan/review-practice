@@ -1,6 +1,10 @@
 const posAverage = (string) => {
-  let strings = string.split(", ")
-  strings = strings.map(element => element.split(''))
+
+  const nestedArrays = (string) => {
+    return string.split(", ").map(element => element.split(''))
+  }
+
+  let strings = nestedArrays(string)
   let positionMatches = 0
   
   strings.forEach((subArray, index) => {
