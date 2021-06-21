@@ -3,5 +3,7 @@ const posAverage = (string) => {
   
   if (strings[0] === strings[1]) {
     return 100
+  } else {
+    return 0
   }
 }
