@@ -11,7 +11,7 @@ const posAverage = (string) => {
     for (let j = 0; j < subArray.length; j++) {
       for (let i = index + 1; i < strings.length; i++) {
         if (subArray[j] === strings[i][j]) {
-          positionMatches++ 
+          positionMatches++
         }
       }
     }
@@ -22,7 +22,7 @@ const posAverage = (string) => {
   }
 
   const posAvg = (number, array) => {
-    return (number / combinations(array)) * 100  
+    return (number / combinations(array)) * 100
   }
 
   const toFloat = (number, array) => {
