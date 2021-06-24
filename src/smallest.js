@@ -1,9 +1,9 @@
 const smallest = (n) => {
   const number = n.toString().split('')
 
-  const lowestNum = Math.min(...number)
-
-  const i = number.indexOf(lowestNum.toString())
-
-  return [n, i]
+  const indexOfLowest = (array) => {
+    return number.indexOf(Math.min(...array).toString())
+  }
+  
+  return [n, indexOfLowest(number)]
 }
