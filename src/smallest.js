@@ -1,3 +1,4 @@
 const smallest = (n) => {
-  return []
+
+  return [n]
 }
