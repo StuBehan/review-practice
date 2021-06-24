@@ -3,7 +3,7 @@ const smallest = (n) => {
 
   const lowestNum = Math.min(...number)
 
-  const j = number.indexOf(lowestNum.toString())
+  const i = number.indexOf(lowestNum.toString())
 
-  return [n, j]
+  return [n, i]
 }
