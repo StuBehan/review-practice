@@ -1,3 +1,3 @@
 const smallest = (n) => {
-  // Your code
+  return []
 }
