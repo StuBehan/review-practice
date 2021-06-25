@@ -4,6 +4,10 @@ const smallest = (n) => {
   const indexOfLowest = (array) => {
     return array.indexOf(Math.min(...array).toString())
   }
+
+  if (indexOfLowest(number) > 0) {
+    
+  }
   
   return [n, indexOfLowest(number)]
 }
