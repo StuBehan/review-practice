@@ -12,6 +12,6 @@ describe('smallest', () => {
   })
 
   it('returns [31, 1, 0] moving the number one to insert point zero', () => {
-    expect(smallest(31)).toEqual([31, 1, 0])
+    expect(smallest(31)).toEqual([13, 1, 0])
   })
 })
