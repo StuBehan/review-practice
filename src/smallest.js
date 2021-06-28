@@ -5,15 +5,22 @@ const smallest = (n) => {
     return array.indexOf(Math.min(...array).toString())
   }
 
-  const lowIndex = indexOfLowest(number)
+  const findLowestNumber = (array, lowest, insert) => {
+    let result = array
+
+    if (lowest > 0) {
+      result.splice(insert, 0, array[lowest])
+      result.splice(lowest + 1, 1)
+    }
+
+    return parseInt(result.join(''))
+  }
+
+  const lowestIndex = indexOfLowest(number)
 
   let insertIndex = 0
-  let result = number
 
-  if (lowIndex > 0) {
-    result.splice(insertIndex, 0, number[lowIndex])
-    result.splice(lowIndex + 1, 1)
-  }
+  const lowestNum = findLowestNumber(number, lowestIndex, insertIndex)
   
-  return [parseInt(result.join('')), lowIndex, insertIndex]
+  return [lowestNum, lowestIndex, insertIndex]
 }
