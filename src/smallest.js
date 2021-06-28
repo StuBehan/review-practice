@@ -5,9 +5,9 @@ const smallest = (n) => {
     return array.indexOf(Math.min(...array).toString())
   }
 
-  if (indexOfLowest(number) > 0) {
-    
-  }
+  const lowIndex = indexOfLowest(number)
   
-  return [n, indexOfLowest(number)]
+  const insertIndex = 0
+  
+  return [n, lowIndex, insertIndex]
 }
