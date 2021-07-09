@@ -11,12 +11,15 @@ const smallest = (n) => {
     if (lowest > 0) {
       result.splice(insert, 0, array[lowest])
       result.splice(lowest + 1, 1)
+    } else {
+      
     }
 
     return parseInt(result.join(''))
   }
 
   const lowestIndex = indexOfLowest(number)
+  console.log(Math.min(...number))
 
   let insertIndex = 0
 

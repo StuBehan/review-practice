@@ -15,7 +15,11 @@ describe('smallest', () => {
     expect(smallest(31)).toEqual([13, 1, 0])
   })
 
-  it('returns [13, 0, 0] removing a zero', () => {
-    expect(smallest(103)).toEqual([13, 0, 0])
+  it('returns [13, 1, 0] removing a zero', () => {
+    expect(smallest(103)).toEqual([13, 1, 0])
+  })
+
+  it('returns [13, 0, 2] removing 2 zeroes', () => {
+    expect(smallest(1003)).toEqual([13, 0, 2])
   })
 })
